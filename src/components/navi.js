@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faSearch);
+import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faEllipsisH);
 
 const WrapperBig = styled.div`
   width: auto;
@@ -40,7 +40,10 @@ const BtnBox = styled.div`
   height: 25px;
   display: flex;
   padding-right: 250px;
-
+  @media (max-width: 1190px) {
+    background-color: ivory;
+    display: inlineblock;
+  }
   .finBtn {
     font-size: 13px;
     font-weight: 500;
@@ -77,9 +80,13 @@ const BtnBox = styled.div`
   .l4,
   .l5,
   .l6,
-  .l7,
+  .l7 {
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
   .l8 {
-    @media (max-width: 1200px) {
+    @media (max-width: 1090px) {
       display: none;
     }
   }
@@ -109,7 +116,11 @@ const HiddenBox = styled.div`
   @media (min-width: 700px) {
     display: none;
   }
+  .smallSearch {
+    float: right;
+  }
 `;
+
 function Navi() {
   return (
     <>
@@ -135,14 +146,17 @@ function Navi() {
             <div className="finBtn">기업 서비스</div>
             <div className="finBtnNew">회원가입하기</div>
           </BtnBox>
+
+          <FontAwesomeIcon icon="search" />
         </Wrapper>
       </WrapperBig>
       <HiddenBox className="hiddenBox">
         <SerBtn>홈</SerBtn>
         <SerBtn>채용</SerBtn>
         <SerBtn>이벤트</SerBtn>
+        <FontAwesomeIcon icon="ellipsis-h" className="smallSearch" />
+        <FontAwesomeIcon icon="search" className="smallSearch" />
       </HiddenBox>
-
       <Line />
     </>
   );

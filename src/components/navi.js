@@ -10,7 +10,6 @@ const WrapperBig = styled.div`
   width: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0px 100px;
 `;
 
 const Wrapper = styled.nav`
@@ -32,6 +31,9 @@ const Wanted = styled.span`
 const WantedTab = styled.div`
   display: flex;
   width: 100px;
+  @media (min-width: 700px) {
+    padding-left: 200px;
+  }
 `;
 
 const BtnBox = styled.div`
@@ -50,7 +52,7 @@ const BtnBox = styled.div`
     display: flex;
     justify-content: center;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
       display: none;
     }
   }
@@ -58,20 +60,18 @@ const BtnBox = styled.div`
     font-size: 13px;
     font-weight: 500;
     margin-right: 20px;
+    margin-left: 80px;
     border: solid 2px;
     border-radius: 20px;
     color: blue;
     width: 180px;
     display: flex;
     justify-content: center;
-    @media (min-width: 1000px) {
+    @media (min-width: 1090px) {
       display: none;
     }
-    @media (max-width: 750) {
-      width: 90px;
-    }
   }
-
+  .l1,
   .l2,
   .l3,
   .l4,
@@ -79,20 +79,22 @@ const BtnBox = styled.div`
   .l6,
   .l7,
   .l8 {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .l9,
+  .l10 {
     @media (max-width: 700px) {
       display: none;
     }
   }
-  .l9,
-  .l10 {
-    @media (max-width: 700px) {
-      display: block;
-    }
-  }
 `;
 
-const SerBtn = styled.span`
-  font-size: 13px;
+const SerBtn = styled.div`
+  display: inline-block;
+  font-size: 8px;
   font-weight: 500;
   margin-right: 20px;
 `;
@@ -101,6 +103,12 @@ const Line = styled.div`
   background-color: gray;
   height: 2px;
   width: auto;
+`;
+
+const HiddenBox = styled.div`
+  @media (min-width: 700px) {
+    display: none;
+  }
 `;
 function Navi() {
   return (
@@ -111,10 +119,9 @@ function Navi() {
             <StackI src="https://static.wanted.co.kr/images/icon-menu.png" />
             <Wanted>wanted</Wanted>
           </WantedTab>
+
           <BtnBox>
-            <SerBtn className="l9">홈</SerBtn>
             <SerBtn className="l1">채용</SerBtn>
-            <SerBtn className="l10">이벤트</SerBtn>
             <SerBtn className="l2">이벤트</SerBtn>
             <SerBtn className="l3">직군별 연봉</SerBtn>
             <SerBtn className="l4">이력서</SerBtn>
@@ -130,6 +137,12 @@ function Navi() {
           </BtnBox>
         </Wrapper>
       </WrapperBig>
+      <HiddenBox className="hiddenBox">
+        <SerBtn>홈</SerBtn>
+        <SerBtn>채용</SerBtn>
+        <SerBtn>이벤트</SerBtn>
+      </HiddenBox>
+
       <Line />
     </>
   );

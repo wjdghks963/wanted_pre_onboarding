@@ -18,4 +18,8 @@
 - [ ] Github Repository 주소와 배포 링크를 제출
 
 1.  netlify로 배포하고, Github Read.me에 배포 링크를 작성해주세요.
-"# test_wanted" 
+
+
+
+
+https://www.notion.so/X-9e8ff10dd1614112a81797219b7e6742

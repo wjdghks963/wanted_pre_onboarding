@@ -9,7 +9,7 @@ const Wrap = styled.div`
   margin: 5% auto;
   width: 80%;
   .slick-prev:before {
-    opaicty: 1;
+    opacity: 1;
     color: black;
     left: 0;
   }

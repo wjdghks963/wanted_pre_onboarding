@@ -52,7 +52,7 @@ function Cards({ img, desc, desc2 }) {
           <br />
           <Desc>{desc2}</Desc>
           <br />
-          <An>바로 가기 ></An>
+          <An>바로 가기 -</An>
         </Box>
       </div>
       <SecBox>
@@ -60,7 +60,7 @@ function Cards({ img, desc, desc2 }) {
         <br />
         <Desc>{desc2}</Desc>
         <br />
-        <An>바로 가기 ></An>
+        <An>바로 가기 -</An>
       </SecBox>
     </>
   );

@@ -54,7 +54,6 @@ const BtnBox = styled.div`
   display: flex;
   padding-right: 250px;
   @media (max-width: 1190px) {
-    background-color: ivory;
     display: flexbox;
   }
   .finBtn {

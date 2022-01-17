@@ -7,7 +7,7 @@ import Cards from "./Cards";
 
 const Wrap = styled.div`
   margin: 5% auto;
-  width: 80%;
+  width: 70%;
   .slick-prev:before {
     opacity: 1;
     color: black;
@@ -45,11 +45,7 @@ const data = [
     desc: "마케팅 주니어를 찾습니다",
     desc2: "1월 17일(월) 설명회 신청하기",
   },
-  {
-    img: "https://static.wanted.co.kr/images/banners/1490/0b775035.jpg",
-    desc: "마케팅 주니어를 찾습니다",
-    desc2: "1월 17일(월) 설명회 신청하기",
-  },
+
   {
     img: "https://static.wanted.co.kr/images/banners/1489/312a0c29.jpg",
     desc: "2022년 달라지는 노동법령",

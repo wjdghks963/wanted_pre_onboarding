@@ -9,7 +9,6 @@ library.add(faSearch, faEllipsisH);
 const WrapperBig = styled.div`
   width: auto;
   display: flex;
-  justify-content: space-between;
 `;
 
 const Wrapper = styled.nav`
@@ -18,6 +17,20 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
+
+  .l1,
+  .l2,
+  .l3,
+  .l4,
+  .l5,
+  .l6,
+  .l7 {
+    @media (min-width: 1090px) and (max-width: 699px) {
+      display: flex;
+      position: absolute;
+      color: red;
+    }
+  }
 `;
 
 const StackI = styled.img`
@@ -42,7 +55,7 @@ const BtnBox = styled.div`
   padding-right: 250px;
   @media (max-width: 1190px) {
     background-color: ivory;
-    display: inlineblock;
+    display: flexbox;
   }
   .finBtn {
     font-size: 13px;
@@ -85,6 +98,7 @@ const BtnBox = styled.div`
       display: none;
     }
   }
+
   .l8 {
     @media (max-width: 1090px) {
       display: none;
@@ -97,13 +111,20 @@ const BtnBox = styled.div`
       display: none;
     }
   }
+  .smallSearchMid,
+  .smallSearchMid {
+    @media not all and (min-width: 700px) and (max-width: 1090px) {
+      display: none;
+    }
+  }
 `;
 
-const SerBtn = styled.div`
-  display: inline-block;
+const SerBtn = styled.span`
   font-size: 8px;
   font-weight: 500;
-  margin-right: 20px;
+  margin-right: 8px;
+  box-sizing: content-box;
+  width: auto;
 `;
 
 const Line = styled.div`
@@ -138,16 +159,16 @@ function Navi() {
             <SerBtn className="l4">이력서</SerBtn>
             <SerBtn className="l5">커뮤니티</SerBtn>
             <SerBtn className="l6">프리랜서</SerBtn>
-            <SerBtn className="l7">AI 합격예측</SerBtn>
+            <SerBtn className="l7">AI합격예측</SerBtn>
             <SerBtn className="l8">
               <FontAwesomeIcon icon="search" />
               회원가입 / 로그인
             </SerBtn>
             <div className="finBtn">기업 서비스</div>
             <div className="finBtnNew">회원가입하기</div>
+            <FontAwesomeIcon icon="search" className="smallSearchMid" />
+            <FontAwesomeIcon icon="ellipsis-h" className="smallSearchMid" />
           </BtnBox>
-
-          <FontAwesomeIcon icon="search" />
         </Wrapper>
       </WrapperBig>
       <HiddenBox className="hiddenBox">
